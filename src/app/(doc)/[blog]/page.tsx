@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <section className='max-w-3xl p-8 mx-auto prose prose-invert bg-neutral-800'>
       <div className='relative'>
-        <GoBack className='absolute p-2 rounded-full -left-32 text-neutral-600 ring-1 ring-neutral-700' />
+        <GoBack className='absolute -left-32 ' />
         <h1>MDX in Next js</h1>
       </div>
 
