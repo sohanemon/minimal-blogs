@@ -1,15 +1,23 @@
 import Image from 'next/image';
 import Social from './social';
 import { cn } from '@/lib/utils';
+import { ClassValue } from 'clsx';
 
-export default function Profile({ mini }: { mini?: boolean }) {
+export default function Profile({
+  mini,
+  className,
+}: {
+  mini?: boolean;
+  className?: ClassValue;
+}) {
   return (
     <section
       className={cn(
         'flex flex-col items-center py-4 border rounded-lg w-80 h-max border-neutral-700',
         {
           'not-prose border-none flex-row gap-3': mini,
-        }
+        },
+        className
       )}
     >
       <Image
