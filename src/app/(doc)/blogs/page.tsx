@@ -13,7 +13,7 @@ export default function Page() {
           <Card />
           <Card />
         </div>
-        <Profile className='@xl:w-auto w-full pb-14 order-first @xl:order-last' />
+        <Profile className='@xl:w-80 w-full pb-14 order-first @xl:order-last' />
       </div>
     </main>
   );
