@@ -1,3 +1,7 @@
 export default function Page() {
-  return <></>;
+  return (
+    <main>
+      <h1 className='capitalize'>Recent blogs by sohanEmon</h1>
+    </main>
+  );
 }
