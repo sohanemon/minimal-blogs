@@ -1,5 +1,6 @@
 import GoBack from '@/components/go-back';
 import Profile from '../blogs/profile';
+import './prism.css';
 import Mdx from './mdx-in-next-js.mdx';
 export default function Page() {
   return (
