@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import mdx from '@next/mdx';
 
 const nextConfig = {
   experimental: {
@@ -6,5 +7,5 @@ const nextConfig = {
   },
 };
 
-const withMDX = require('@next/mdx')();
+const withMDX = mdx();
 export default withMDX(nextConfig);
