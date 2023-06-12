@@ -1,4 +1,4 @@
-import Lol from './Lol.mdx';
+import Lol from './lol.mdx';
 export default function Page() {
   return (
     <>
@@ -6,9 +6,9 @@ export default function Page() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum eum
         do
       </h1>
-      {/* <div className='prose prose-stone'>
+      <div className='prose prose-stone'>
         <Lol />
-      </div> */}
+      </div>
     </>
   );
 }
