@@ -2,7 +2,7 @@ import Card from './card';
 
 export default function Page() {
   return (
-    <main className='container '>
+    <main className='container @container max-w-4xl'>
       <h1 className='my-4 text-3xl font-semibold text-center capitalize'>
         Recent blogs by sohanEmon
       </h1>
