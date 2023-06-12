@@ -1,7 +1,9 @@
 export default function Page() {
   return (
-    <main>
-      <h1 className='capitalize'>Recent blogs by sohanEmon</h1>
+    <main className='@container'>
+      <h1 className='my-4 text-3xl text-center capitalize'>
+        Recent blogs by sohanEmon
+      </h1>
     </main>
   );
 }
