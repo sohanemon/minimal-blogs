@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 import { HTMLAttributes } from 'react';
 
 export default function Card({ className }: HTMLAttributes<HTMLDivElement>) {
@@ -16,9 +17,13 @@ export default function Card({ className }: HTMLAttributes<HTMLDivElement>) {
         MDX is a popular library to add Markdown into your React application.
         Using MDX we can add React components inside markdown.
       </p>
-      <button className='text-sm opacity-90 group-hover:opacity-100'>
+      <Link
+        as={'button'}
+        href={'/mdx-in-next-js'}
+        className='text-sm opacity-90 group-hover:opacity-100'
+      >
         See more...
-      </button>
+      </Link>
     </div>
   );
 }
