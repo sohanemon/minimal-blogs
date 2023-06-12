@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Social from './social';
 
 export default function Profile() {
   return (
@@ -12,6 +13,7 @@ export default function Profile() {
       />
       <p className='font-semibold'>Sohan R. Emon</p>
       <p className='text-xs opacity-70'>Web Developer</p>
+      <Social />
     </section>
   );
 }
