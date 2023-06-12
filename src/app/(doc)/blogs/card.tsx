@@ -18,7 +18,6 @@ export default function Card({ className }: HTMLAttributes<HTMLDivElement>) {
         Using MDX we can add React components inside markdown.
       </p>
       <Link
-        as={'button'}
         href={'/mdx-in-next-js'}
         className='text-sm opacity-90 group-hover:opacity-100'
       >
