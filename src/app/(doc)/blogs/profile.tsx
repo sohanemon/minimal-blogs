@@ -8,7 +8,7 @@ export default function Profile({ mini }: { mini?: boolean }) {
       className={cn(
         'flex flex-col items-center py-4 border rounded-lg w-80 h-max border-neutral-700',
         {
-          'not-prose border-none': mini,
+          'not-prose border-none flex-row gap-3': mini,
         }
       )}
     >
@@ -21,9 +21,13 @@ export default function Profile({ mini }: { mini?: boolean }) {
           'scale-100 w-10 aspect-square': mini,
         })}
       />
-      <p className='font-semibold'>Sohan R. Emon</p>
-      <p className='text-xs opacity-70'>Web Developer</p>
-      <Social />
+      <div
+        className={cn('flex flex-col items-center', { 'items-start': mini })}
+      >
+        <p className='font-semibold'>Sohan R. Emon</p>
+        <p className='text-xs opacity-70'>Web Developer</p>
+      </div>
+      {!mini && <Social />}
     </section>
   );
 }
