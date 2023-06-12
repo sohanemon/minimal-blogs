@@ -1,4 +1,4 @@
-import Lol from './lol.mdx';
+import Lol from './Lol.mdx';
 export default function Page() {
   return (
     <>
