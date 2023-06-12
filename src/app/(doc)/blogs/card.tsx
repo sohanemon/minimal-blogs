@@ -21,7 +21,7 @@ export default function Card({ className }: HTMLAttributes<HTMLDivElement>) {
         href={'/mdx-in-next-js'}
         className='text-sm opacity-90 group-hover:opacity-100'
       >
-        See more...
+        Read more...
       </Link>
     </div>
   );
