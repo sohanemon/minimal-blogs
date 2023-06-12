@@ -1,1 +1,67 @@
-Setting up MDX in Next JS is an easy thing.
+MDX is a superset of markdown that lets you write JSX directly in your markdown files. It is a powerful way to add dynamic interactivity and embed React components within your content.
+
+Next.js can support both local MDX content inside your application, as well as remote MDX files fetched dynamically on the server. The Next.js plugin handles transforming Markdown and React components into HTML, including support for usage in Server Components (default in app).
+
+## @next/mdx
+
+The @next/mdx package is configured in the next.config.js file at your project's root. It sources data from local files, allowing you to create pages with a .mdx extension directly in your /pages or /app directory.
+
+## Getting Started
+
+```bash
+npm install @next/mdx @mdx-js/loader @mdx-js/react @types/mdx
+```
+
+Create mdx-components.tsx in the root of your application (the parent folder of app):
+
+```tsx
+import type { MDXComponents } from 'mdx/types';
+
+// This file allows you to provide custom React components
+// to be used in MDX files. You can import and use any
+// React component you want, including components from
+// other libraries.
+
+// This file is required to use MDX in `app` directory.
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    // Allows customizing built-in components, e.g. to add styling.
+    // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
+    ...components,
+  };
+}
+```
+
+## Update next.config.js to use mdxRs:
+
+```ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    mdxRs: true,
+  },
+};
+
+const withMDX = require('@next/mdx')();
+module.exports = withMDX(nextConfig);
+```
+
+Add a new file with MDX content to your app directory:
+
+```md
+Hello, Next.js!
+You can import and use React components in MDX files.
+```
+
+Import the MDX file inside a page to display the content:
+app/page.tsx
+
+```tsx
+import HelloWorld from './hello.mdx';
+
+export default function Page() {
+  return <HelloWorld />;
+}
+```
+
+And that's it! Now you have the blog content written in Markdown format. Please note that the code snippets within the Markdown will be rendered as code blocks when viewed in a Markdown editor or renderer.
