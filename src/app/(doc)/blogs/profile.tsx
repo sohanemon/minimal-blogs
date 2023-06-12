@@ -1,9 +1,17 @@
 import Image from 'next/image';
 import Social from './social';
+import { cn } from '@/lib/utils';
 
-export default function Profile() {
+export default function Profile({ mini }: { mini?: boolean }) {
   return (
-    <section className='flex flex-col items-center py-4 border rounded-lg w-80 h-max border-neutral-700'>
+    <section
+      className={cn(
+        'flex flex-col items-center py-4 border rounded-lg w-80 h-max border-neutral-700',
+        {
+          '': mini,
+        }
+      )}
+    >
       <Image
         src={'/assets/avatar.png'}
         alt='author'
