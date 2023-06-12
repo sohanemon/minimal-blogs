@@ -7,8 +7,12 @@ export default function Page() {
       <h1 className='my-4 text-3xl font-semibold text-center capitalize'>
         Recent blogs by sohanEmon
       </h1>
-      <div className='grid grid-cols-3 mt-10'>
-        <Card className='col-span-2' />
+      <div className='flex gap-10 mt-10'>
+        <div className='space-y-6'>
+          <Card />
+          <Card />
+          <Card />
+        </div>
         <Profile />
       </div>
     </main>
