@@ -1,4 +1,5 @@
 import Card from './card';
+import Profile from './profile';
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       </h1>
       <div className='grid grid-cols-3 mt-10'>
         <Card className='col-span-2' />
+        <Profile />
       </div>
     </main>
   );
