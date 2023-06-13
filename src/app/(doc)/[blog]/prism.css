@@ -2,6 +2,9 @@ pre[class*='language-'] {
   color: theme('colors.zinc.100');
 }
 
+body{
+  background: therm;
+}
 .token.tag,
 .token.class-name,
 .token.selector,
